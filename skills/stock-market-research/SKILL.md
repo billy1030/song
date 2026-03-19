@@ -17,6 +17,7 @@ The system context may be stale. NEVER assume or guess today's date. Check expli
 
 ### 🇺🇸 US Stocks
 - **Primary:** Yahoo Finance → https://finance.yahoo.com
+- **Confirmed Realtime:** WalletInvestor → https://walletinvestor.com (user-confirmed reliable for real-time/recent data)
 - **Fallback:** CNBC, Reuters, Investopedia, Sunday Guardian Live
 - **Index codes:** ^GSPC (S&P 500), ^DJI (Dow Jones), ^IXIC (Nasdaq)
 
@@ -33,7 +34,7 @@ The system context may be stale. NEVER assume or guess today's date. Check expli
 ### Method 1: Web Search (Recommended)
 1. After checking the clock, use `web_search` with `date_after:"YYYY-MM-DD"` filter
 2. Always include the date filter — at minimum "yesterday"
-3. Pull data from authoritative sources (CNBC, Reuters, RTTNews, etc.)
+3. Prioritize authoritative sources: **CNBC, Reuters, WalletInvestor**
 4. Report source attribution for each data point
 
 ### Method 2: Web Fetch
