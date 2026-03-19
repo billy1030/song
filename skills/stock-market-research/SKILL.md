@@ -6,7 +6,7 @@ Standardized approach for AI to research and report stock market data with prope
 ---
 
 ## Current Date
-**Always check:** Today is 2026-03-19 (UTC) unless the user specifies otherwise.
+**ALWAYS verify via session_status tool before data retrieval.** The system may not have the correct date in context. Do NOT assume — check.
 
 ---
 
@@ -78,7 +78,8 @@ When providing stock market research:
 
 ## Critical Rules
 
-1. **Never fabricate data** — if you don't have today's close, say "today's data not yet available"
+1. **Check clock FIRST** — Always verify current date/time before pulling data. Use `session_status` tool to confirm today's exact date, then filter web search with appropriate `date_after` parameter.
+2. **Never fabricate data** — if you don't have today's close, say "today's data not yet available"
 2. **Always show your work** — cite sources inline
 3. **Use web search first** — it's more reliable than direct fetch for this use case
 4. **Check dates** — old data must be labeled as old; don't present stale info as current
@@ -90,8 +91,8 @@ When providing stock market research:
 
 **User asks:** "今日美股點睇？"
 
-1. Check current date (2026-03-19)
-2. Run web search for "US stock market March 19 2026" with date_after filter
+1. **Check clock FIRST** — Run `session_status` to confirm today's exact date
+2. Run web search for "US stock market [date]" with date_after filter
 3. Collect data from CNBC/Reuters/RTTNews
 4. Format response with sources
 5. Clearly state if today's close isn't available yet
