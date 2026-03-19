@@ -1,0 +1,13 @@
+{
+  "version": 1,
+  "skills": {
+    "self-improving-agent": {
+      "version": "3.0.1",
+      "installedAt": 1773389042476
+    },
+    "memory-manager": {
+      "version": "1.0.0",
+      "installedAt": 1773566526139
+    }
+  }
+}
