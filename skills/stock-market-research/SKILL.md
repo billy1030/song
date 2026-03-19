@@ -5,8 +5,11 @@ Standardized approach for AI to research and report stock market data with prope
 
 ---
 
-## Current Date
-**ALWAYS verify via session_status tool before data retrieval.** The system may not have the correct date in context. Do NOT assume — check.
+## ⚠️ FIRST STEP: Check the Clock
+
+**BEFORE any data retrieval, ALWAYS run `session_status` to verify the current date/time.**
+
+The system context may be stale. NEVER assume or guess today's date. Check explicitly.
 
 ---
 
@@ -28,8 +31,8 @@ Standardized approach for AI to research and report stock market data with prope
 ## Working Methods
 
 ### Method 1: Web Search (Recommended)
-1. Use `web_search` with `date_after:"YYYY-MM-DD"` filter to get fresh results
-2. Always include the date filter — minimum "yesterday" or "2026-03-18"
+1. After checking the clock, use `web_search` with `date_after:"YYYY-MM-DD"` filter
+2. Always include the date filter — at minimum "yesterday"
 3. Pull data from authoritative sources (CNBC, Reuters, RTTNews, etc.)
 4. Report source attribution for each data point
 
@@ -50,19 +53,17 @@ Standardized approach for AI to research and report stock market data with prope
 
 Before reporting any stock data, confirm:
 
-- [ ] **Date check:** Do I know today's exact date?
-- [ ] **Source check:** Can I identify where the data came from?
-- [ ] **Freshness check:** Is the data from today or yesterday? (older data must be labeled as such)
-- [ ] **Honesty check:** If I don't have the latest closing data, say so explicitly
+- [ ] **Clock check:** Did you run `session_status` first to get today's exact date?
+- [ ] **Date check:** Is your data from today or yesterday? (older = labeled as such)
+- [ ] **Source check:** Can you name where the data came from?
+- [ ] **Honesty check:** If you don't have today's close, say "not yet available"
 
 ---
 
 ## Output Format
 
-When providing stock market research:
-
 ```
-**📊 [Market] Market Update — [Date]**
+**📊 [Market] Market Update — [Verified Date from session_status]**
 
 **Key Points:**
 - [Data point] | Source: [Website]
@@ -78,12 +79,12 @@ When providing stock market research:
 
 ## Critical Rules
 
-1. **Check clock FIRST** — Always verify current date/time before pulling data. Use `session_status` tool to confirm today's exact date, then filter web search with appropriate `date_after` parameter.
-2. **Never fabricate data** — if you don't have today's close, say "today's data not yet available"
-2. **Always show your work** — cite sources inline
-3. **Use web search first** — it's more reliable than direct fetch for this use case
-4. **Check dates** — old data must be labeled as old; don't present stale info as current
-5. **Admit limitations** — dynamic stock prices require authenticated APIs; web scraping has limits
+1. **Check clock FIRST, always** — Run `session_status` before anything else
+2. **Never fabricate data** — if you don't have today's close, say so
+3. **Always cite sources** — inline attribution is mandatory
+4. **Use web search first** — more reliable than direct fetch
+5. **Label stale data** — old news must be labeled "older data"
+6. **Admit limits** — dynamic prices need APIs; scrapers have constraints
 
 ---
 
@@ -91,9 +92,19 @@ When providing stock market research:
 
 **User asks:** "今日美股點睇？"
 
-1. **Check clock FIRST** — Run `session_status` to confirm today's exact date
-2. Run web search for "US stock market [date]" with date_after filter
-3. Collect data from CNBC/Reuters/RTTNews
-4. Format response with sources
-5. Clearly state if today's close isn't available yet
+```
+Step 1: Run session_status
+→ Confirmed: 2026-03-19 08:33 UTC
+
+Step 2: Run web_search with date_after:"2026-03-18"
+→ Query: "US stock market March 19 2026"
+→ Results from CNBC, Reuters
+
+Step 3: Format and attribute
+→ S&P 500: X points | Source: CNBC
+→ Dow Jones: X points | Source: Reuters
+
+Step 4: State freshness clearly
+→ ⚠️ Note: US markets close at 9:30 PM HK time; today's close not yet available
+```
 
