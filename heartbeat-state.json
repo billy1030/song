@@ -1,0 +1,13 @@
+{
+  "lastChecks": {
+    "idle_concert": 1775541720
+  },
+  "monitoring": {
+    "i-dle_concert": {
+      "query": "i-dle 香港 演唱會 公開發售 2026",
+      "lastResult": "門票資訊有待公佈，暫無最新消息",
+      "lastCheck": "2026-04-06",
+      "nextCheck": "2026-04-07"
+    }
+  }
+}

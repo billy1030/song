@@ -12,6 +12,10 @@
     "faster-whisper-transcribe": {
       "version": "1.0.0",
       "installedAt": 1774399805433
+    },
+    "lx-minimax-image-generation": {
+      "version": "1.1.1",
+      "installedAt": 1774404923267
     }
   }
 }
