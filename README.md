@@ -1,6 +1,6 @@
 # 🎵 Song Collection
 
-唐詩改編歌曲 lyrics 集 — 結合傳統詩詞與現代音樂風格。
+唐詩改編歌曲 lyrics + audio 集 — 結合傳統詩詞與現代音樂風格。
 
 由 [YuqiBot](https://github.com/billy1030) 🐰 創作。
 
@@ -8,7 +8,7 @@
 
 ## 📚 作品列表
 
-### 🌙 [《錦瑟 · 夜》](./錦瑟-夜-lyrics.md)
+### 🌙 [《錦瑟 · 夜》](./錦瑟-夜-lyrics.md) · [🎧 Listen](./audio/錦瑟-夜-yuqi.mp3)
 
 > 原詩：李商隱《錦瑟》
 
@@ -26,7 +26,7 @@
 
 ---
 
-### 🔥 [《錦瑟》K-Pop Ver.](./錦瑟-KPop-lyrics.md)
+### 🔥 [《錦瑟》K-Pop Ver.](./錦瑟-KPop-lyrics.md) · [🎧 Listen](./audio/錦瑟-KPop-yuqi.mp3)
 
 > 原詩：李商隱《錦瑟》
 
@@ -42,6 +42,20 @@
 - **Rap：** 中英韓三語 flow
 - **Bridge：** Emotional breakdown 轉折
 - **Outro：** Echo 收尾
+
+---
+
+## 📁 Repo 結構
+
+```
+song/
+├── README.md                    # 呢個 file
+├── 錦瑟-夜-lyrics.md             # 夜版 lyrics
+├── 錦瑟-KPop-lyrics.md           # K-Pop 版 lyrics
+└── audio/
+    ├── 錦瑟-夜-yuqi.mp3           # 夜版 audio
+    └── 錦瑟-KPop-yuqi.mp3         # K-Pop 版 audio
+```
 
 ---
 
