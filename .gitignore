@@ -1,0 +1,58 @@
+# ===== OS / Editor =====
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+*.bak
+*.bak.*
+
+# ===== YuqiBot workspace — keep ONLY songs/ + audio/ + root README =====
+# (Personal/agent infrastructure files — should not be in song repo)
+
+# Agent identity & docs
+AGENTS.md
+BOOTSTRAP.md
+HEARTBEAT.md
+IDENTITY.md
+MEMORY.md
+MEMORY.md.bak.*
+SOUL.md
+TOOLS.md
+USER.md
+
+# Local state
+.clawhub/
+.openclaw/
+heartbeat-state.json
+entities.json
+mempalace.yaml
+state/
+
+# Skills (local installations, not part of song project)
+skills/
+
+# Memory system
+memory/
+
+# ===== Audio/image files at ROOT only (songs/ + audio/ are tracked) =====
+# Leading slash = root level only
+/*.mp3
+/*.wav
+/*.flac
+/*.ogg
+/*.m4a
+/*.jpg
+/*.png
+/*.webp
+/*.gif
+
+# ===== Logs & temp =====
+*.log
+*.tmp
+*.temp
+.cache/
